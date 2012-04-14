@@ -8,7 +8,7 @@ trait Multiton {
 
 	public static function instance($instance = 'default') {
 		if (!array_key_exists($instance, static::$_instances)) {
-			return false;
+			return null;
 		}
 
 		return static::$_instances[$instance];
