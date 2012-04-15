@@ -1,12 +1,9 @@
 <? $current = \Arr::in_array_recursive('/'.\Uri::string(), $nav) ?>
 
-<li class="<?= $current ? 'active' : '' ?> dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		<?= $name ?>
-		<b class="caret"></b>
-	</a>
+<li class="<?= $current ? 'active' : '' ?>">
+	<?= $name ?>
 
-	<ul class="dropdown-menu">
+	<ul>
 		<?
 			foreach ($nav as $name => $link) {
 				if (is_array($link)) {
